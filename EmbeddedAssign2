@@ -1,0 +1,28 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET -1
+
+// 自定义 SDA=4, SCL=5
+#define CUSTOM_SDA 4
+#define CUSTOM_SCL 5
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+void setup() {
+  Wire.begin(CUSTOM_SDA, CUSTOM_SCL); // 指定自定义引脚
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    while (1); // 初始化失败
+  }
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+  display.println("Hello chenming I am dingsir");
+  display.display();
+}
+
+void loop() {}
