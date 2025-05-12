@@ -1,0 +1,59 @@
+#include <Arduino.h>
+void setup() {
+    pinMode(4, OUTPUT);  // 设置引脚 4为输出模式
+    pinMode(5, OUTPUT);  // 设置引脚 5 为输出模式
+    pinMode(18, OUTPUT);  // 设置引脚 18 为输出模式
+    pinMode(19, OUTPUT);  // 设置引脚 19 为输出模式
+    pinMode(21, OUTPUT);  // 设置引脚 21 为输出模式
+    pinMode(22, OUTPUT);  // 设置引脚 22 为输出模式
+  }
+  
+  void loop() {
+    digitalWrite(4, HIGH);  // 引脚 4输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5秒
+    digitalWrite(4, LOW);   // 引脚 4 输出低电平，熄灭 LED
+  
+    digitalWrite(5, HIGH);  // 引脚 5 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(5, LOW);   // 引脚 5 输出低电平，熄灭 LED
+  
+    digitalWrite(18, HIGH);  // 引脚 18 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(18, LOW);   // 引脚 18 输出低电平，熄灭 LED
+  
+    digitalWrite(19, HIGH);  // 引脚 19 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(19, LOW);   // 引脚 19 输出低电平，熄灭 LED
+  
+    digitalWrite(21, HIGH);  // 引脚 21 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(21, LOW);   // 引脚 21 输出低电平，熄灭 LED
+  
+    digitalWrite(22, HIGH);  // 引脚 22 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(22, LOW);   // 引脚 22 输出低电平，熄灭 LED
+    
+    digitalWrite(22, HIGH);  // 引脚 22 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(22, LOW);   // 引脚 22 输出低电平，熄灭 LED
+
+    digitalWrite(21, HIGH);  // 引脚 21 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(21, LOW);   // 引脚 21 输出低电平，熄灭 LED
+
+    digitalWrite(19, HIGH);  // 引脚 19 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(19, LOW);   // 引脚 19 输出低电平，熄灭 LED
+
+    digitalWrite(18, HIGH);  // 引脚 18 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(18, LOW);   // 引脚 18 输出低电平，熄灭 LED
+
+    digitalWrite(5, HIGH);  // 引脚 5 输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5 秒
+    digitalWrite(5, LOW);   // 引脚 5 输出低电平，熄灭 LED
+  
+    digitalWrite(4, HIGH);  // 引脚 4输出高电平，点亮 LED
+    delay(500);            // 延迟 0.5秒
+    digitalWrite(4, LOW);   // 引脚 4 输出低电平，熄灭 LED
+  }
