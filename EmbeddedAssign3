@@ -1,0 +1,31 @@
+#include <Arduino.h>
+const int LED1 = 4;  // LED1连接引脚4
+const int LED2 = 5;  // LED2连接引脚5
+
+void setup() {
+  Serial.begin(9600);          // 初始化串口通信，波特率9600
+  pinMode(LED1, OUTPUT);       // 设置LED引脚为输出模式
+  pinMode(LED2, OUTPUT);
+  digitalWrite(LED1, LOW);     // 初始化LED状态为熄灭
+  digitalWrite(LED2, LOW);
+}
+
+void loop() {
+  if (Serial.available() > 0) {         // 检测串口是否有数据
+    String command = Serial.readString();  // 读取字符串指令
+    command.trim();                     // 去除首尾空白及换行符
+
+    if (command == "1") {
+      digitalWrite(LED1, HIGH);         // 点亮LED1
+      Serial.println("LED1on");         // 串口反馈
+    } else if (command == "2") {
+      digitalWrite(LED2, HIGH);         // 点亮LED2
+      Serial.println("LED2on");         // 串口反馈
+    }
+    else if (command == "0") {
+      digitalWrite(LED1, LOW);
+      digitalWrite(LED2, LOW);
+      Serial.println("all LED off");
+    }
+  }
+}
